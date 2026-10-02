@@ -49,7 +49,7 @@ Excel file  →  Python (clean + model)  →  SQL Server (star schema)  →  T-S
 7. **Verification:** re-read the data from SQL Server with a 5-table join to confirm the load.
 
 ## SQL Analysis
-All queries are in [`analysis_queries.sql`](analysis_queries.sql).
+All queries are in [`sql/analysis_queries.sql`](sql/analysis_queries.sql).
 
 | Business question | Techniques |
 |---|---|
@@ -111,17 +111,19 @@ Lines with no discount earn the most, and every line discounted above 20% loses 
 
 ## Project Structure
 ```
-├── etl_load_to_sql_server.ipynb   # cleaning, modeling, loading
-├── analysis_queries.sql           # analysis queries, view, procedure
+├── notebooks/
+│   └── etl_load_to_sql_server.ipynb   # cleaning, modeling, loading
+├── sql/
+│   └── analysis_queries.sql           # analysis queries, view, procedure
 ├── data/
-│   └── Central_Superstore.xlsx    # source data
+│   └── Central_Superstore.xlsx        # source data
 ├── images/
-│   └── star_schema_diagram.png    # data model
+│   └── star_schema_diagram.png        # data model
 └── README.md
 ```
 
 ## How to Run
-**Requirements:** SQL Server (Developer or Express), ODBC Driver 17 for SQL Server, Python 3.
+**Requirements:** "open notebooks/etl_load_to_sql_server.ipynb"
 
 1. Install the packages:
 ```bash
